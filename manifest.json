@@ -9,6 +9,14 @@
     "imageUrl": "",
     "versions": [
       {
+        "version": "0.1.0.1",
+        "changelog": "\n- Release tooling: publishing to the public plugin repository works when it is still empty.\n  No functional change to the plugin (first update published through the catalog).\n",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://github.com/dab33n/jellyxtream-repo/releases/download/v0.1.0.1/jellyxtream_0.1.0.1.zip",
+        "checksum": "3b68adcbe7e2099b39f801520078f856",
+        "timestamp": "2026-10-14T14:21:05Z"
+      },
+      {
         "version": "0.1.0.0",
         "changelog": "\nFirst release of the Jellyxtream fork (based on Jellyfin Xtream Library 1.55.3.0, release/1.x).\n\n- New plugin identity (name \"Jellyxtream\", own GUID and configuration file). The configuration of\n  the original \"Xtream Library\" plugin is imported on first start and left unchanged.\n- Provider-friendly client: one request budget per provider for all plugin components\n  (default 2 concurrent requests), Retry-After honoured, no retries on 401/403/404, automatic pause\n  after repeated refusals or dropped connections, single test request to resume.\n- Clear connection test results: wrong credentials (auth = 0), HTTP status, dropped connection and\n  timeout are reported separately; no credentials in log messages.\n- No orphan deletion after an incomplete provider fetch; only one sync runs at a time.\n- Diagnostics endpoint `XtreamLibrary/Diagnostics/Providers` (sanitised request log).\n- Fix: ratings were misread on servers with a German locale.\n- Artwork URLs of hosts that do not accept connections are no longer written to NFO files (a dead\n  provider image host made library scans wait 21 s per item); checked once per host, cached.\n- New provider option \"Remove leading country code\" (\"AL - Title\" -> \"Title\"), on by default, off for\n  configurations imported from the original plugin. Improves metadata matching considerably.",
         "targetAbi": "10.11.0.0",
