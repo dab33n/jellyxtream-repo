@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "guid": "1a60bd65-bcc1-4749-b32d-1755e796dd40",
+    "name": "Jellyxtream",
+    "overview": "Xtream IPTV: movies, series and Live TV as native Jellyfin content",
+    "description": "Integrates Xtream-compatible IPTV providers. Movies and series become native libraries (STRM), Live TV is a native tuner with EPG. Provider-friendly by design: one shared request budget, classified errors and an automatic pause instead of request storms. Fork of firestaerter3/Jellyfin-Xtream-Library (GPL-3.0-or-later).",
+    "owner": "jellyxtream",
+    "category": "Live TV",
+    "imageUrl": "",
+    "versions": [
+      {
+        "version": "0.1.0.0",
+        "changelog": "\nFirst release of the Jellyxtream fork (based on Jellyfin Xtream Library 1.55.3.0, release/1.x).\n\n- New plugin identity (name \"Jellyxtream\", own GUID and configuration file). The configuration of\n  the original \"Xtream Library\" plugin is imported on first start and left unchanged.\n- Provider-friendly client: one request budget per provider for all plugin components\n  (default 2 concurrent requests), Retry-After honoured, no retries on 401/403/404, automatic pause\n  after repeated refusals or dropped connections, single test request to resume.\n- Clear connection test results: wrong credentials (auth = 0), HTTP status, dropped connection and\n  timeout are reported separately; no credentials in log messages.\n- No orphan deletion after an incomplete provider fetch; only one sync runs at a time.\n- Diagnostics endpoint `XtreamLibrary/Diagnostics/Providers` (sanitised request log).\n- Fix: ratings were misread on servers with a German locale.\n- Artwork URLs of hosts that do not accept connections are no longer written to NFO files (a dead\n  provider image host made library scans wait 21 s per item); checked once per host, cached.\n- New provider option \"Remove leading country code\" (\"AL - Title\" -> \"Title\"), on by default, off for\n  configurations imported from the original plugin. Improves metadata matching considerably.",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://github.com/dab33n/jellyxtream-repo/releases/download/v0.1.0.0/jellyxtream_0.1.0.0.zip",
+        "checksum": "00d53d3d2d2d4a85ca314bf267d86ec9",
+        "timestamp": "2026-10-14T14:11:29Z"
+      }
+    ]
+  }
+]
