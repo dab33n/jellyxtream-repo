@@ -9,6 +9,14 @@
     "imageUrl": "",
     "versions": [
       {
+        "version": "0.1.0.2",
+        "changelog": "\n- Removed the \"Use beta channel\" option inherited from upstream: it registered the original\n  plugin's beta repository in Jellyfin (ADR-003: the original must not run next to Jellyxtream).\n  An already registered \"Xtream Library (Beta)\" repository is left untouched; remove it under\n  Dashboard -> Plugins -> Repositories if present.\n- Settings page heading now reads \"Jellyxtream Settings\".\n",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://github.com/dab33n/jellyxtream-repo/releases/download/v0.1.0.2/jellyxtream_0.1.0.2.zip",
+        "checksum": "96b677136f695b074311f7b8c694dd77",
+        "timestamp": "2026-10-14T14:29:22Z"
+      },
+      {
         "version": "0.1.0.1",
         "changelog": "\n- Release tooling: publishing to the public plugin repository works when it is still empty.\n  No functional change to the plugin (first update published through the catalog).\n",
         "targetAbi": "10.11.0.0",
