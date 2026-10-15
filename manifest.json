@@ -9,6 +9,14 @@
     "imageUrl": "",
     "versions": [
       {
+        "version": "0.1.0.6",
+        "changelog": "\n- Performance fix: every sync re-read all movie/episode .strm files to check the playback route\n  (0.1.0.4/0.1.0.5). With ~50 000 episodes that took ~17 minutes of disk I/O per hourly sync and\n  slowed the whole server. The check now runs only after the playback-route settings change; the\n  plugin remembers the last applied state in its data folder.\n",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://github.com/dab33n/jellyxtream-repo/releases/download/v0.1.0.6/jellyxtream_0.1.0.6.zip",
+        "checksum": "cffd5d1a99e325ba87afe3e98be786e9",
+        "timestamp": "2026-10-15T08:25:28Z"
+      },
+      {
         "version": "0.1.0.5",
         "changelog": "\n- Fix: switching \"Playback Route\" now rewrites the existing .strm files as soon as the settings are\n  saved. 0.1.0.4 only did it at the next sync, so clients kept fetching from the provider until then.\n- The option has its own section \"Playback Route (Movies & Series)\" under General; the Movies and\n  Series tabs show which route is active. It always covered both movies and episodes.\n- Log: one line per proxied request (who, byte range, first-byte time, MB and seconds), to see where a\n  slow start spends its time (e.g. Jellyfin's pre-play probe vs. the player).\n",
         "targetAbi": "10.11.0.0",
