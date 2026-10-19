@@ -9,6 +9,14 @@
     "imageUrl": "",
     "versions": [
       {
+        "version": "0.2.0.0",
+        "changelog": "\n- **For Jellyfin 12 (12.0 or newer).** Same features as 0.1.0.6, built on .NET 10 against Jellyfin 12.0.0.\n  Servers on Jellyfin 10.11 keep being offered 0.1.0.6 (the catalog picks by `targetAbi`).\n- Upgrade from Jellyfin 10.11.9 + 0.1.0.6 to Jellyfin 12.2 + 0.2.0.0 tested on an isolated server, both\n  ways (plugin left installed and auto-updated by the catalog; plugin removed first and reinstalled):\n  item ids, watched state and resume positions, the playback route, the proxy secret and every .strm file\n  stay as they were; playback through the server works before and after the required library scan.\n  Report: docs/diagnostics/jf12-upgrade-e2e-2026-10-19.md, guide: docs/upgrade-jellyfin-12.md.\n- Config page: sends the Jellyfin 12 authorization header when loading channels and catalogue content\n  (upstream fix #117).\n",
+        "targetAbi": "12.0.0.0",
+        "sourceUrl": "https://github.com/dab33n/jellyxtream-repo/releases/download/v0.2.0.0/jellyxtream_0.2.0.0.zip",
+        "checksum": "8063f6b58630f31e93ff38f7ad98e5c8",
+        "timestamp": "2026-10-19T16:20:43Z"
+      },
+      {
         "version": "0.1.0.6",
         "changelog": "\n- Performance fix: every sync re-read all movie/episode .strm files to check the playback route\n  (0.1.0.4/0.1.0.5). With ~50 000 episodes that took ~17 minutes of disk I/O per hourly sync and\n  slowed the whole server. The check now runs only after the playback-route settings change; the\n  plugin remembers the last applied state in its data folder.\n",
         "targetAbi": "10.11.0.0",
